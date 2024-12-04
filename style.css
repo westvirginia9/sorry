@@ -1,0 +1,109 @@
+/* Global Style */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #fef6e4;
+}
+
+h1 {
+    color: #ff6b6b;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #333;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff4b4b;
+}
+
+/* Halaman */
+.page {
+    display: none;
+    padding: 20px;
+}
+
+.page.hidden {
+    display: none;
+}
+
+
+.page.active {
+    display: block;
+}
+
+/* Taman Virtual */
+.garden {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.flower {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.flower img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.flower:hover {
+    transform: scale(1.2);
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #ff6b6b;
+    display: none;
+}
+
+/* Animasi confetti */
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff6b6b;
+    animation: fall 2s ease-out forwards;
+    border-radius: 50%;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(500px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
